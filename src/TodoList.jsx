@@ -10,15 +10,16 @@ export function TodoList({todos, toggleTodo, deleteTodo}) {
             {/* eslint-disable-next-line react/prop-types */}
 
             {/* eslint-disable-next-line react/prop-types */}
-            {todos.map((todo => {
-                <TodoItem
-                    {...todo}
-                    key={todo.id}
-                    toggleTodo={toggleTodo}
-                    deleteTodo={deleteTodo}
-                />
+            {todos.map(todo => {
+                return (
+                    <TodoItem
+                        {...todo}
+                        key={todo.id}
+                        toggleTodo={toggleTodo}
+                        deleteTodo={deleteTodo}
+                    />)
 
-            }))}
+            })}
         </ul>
 
     )

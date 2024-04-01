@@ -5,7 +5,8 @@ import {useEffect, useState} from "react";
 
 
 export default function App() {
-    const [todos, setTodos] = useState(() => {
+    // eslint-disable-next-line no-empty-pattern
+    const [todos, setTodos] = useState(([]) => {
         const localValue = localStorage.getItem("ITEMS")
         if (localValue === null) return []
         return JSON.parse(localValue)
