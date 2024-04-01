@@ -1,5 +1,7 @@
-export function TodoItem(completed, id, title, toggleTodo, deleteTodo) {
-    return (<li>
+// eslint-disable-next-line react/prop-types
+export function TodoItem({completed, id, title, toggleTodo, deleteTodo}) {
+    return (
+        <li>
             <label>
                 <input
                     type="checkbox"
@@ -8,8 +10,9 @@ export function TodoItem(completed, id, title, toggleTodo, deleteTodo) {
                 />
                 {title}
             </label>
-            <button onClick={() => deleteTodo(id)} className="btn btn btn-danger">Delete</button>
+            <button onClick={() => deleteTodo(id)} className="btn btn-danger">
+                Delete
+            </button>
         </li>
-
     )
 }
